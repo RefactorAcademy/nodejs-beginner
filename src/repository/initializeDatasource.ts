@@ -1,4 +1,6 @@
-const typeorm = require('typeorm')
+const typeorm = require('typeorm');
+import { User } from "../entities/userEntity";
+
 let  { DataSource }  = typeorm;
 
 const AppDataSource = new DataSource({
@@ -8,6 +10,9 @@ const AppDataSource = new DataSource({
     username: "kandpalbauddhik2000",
     password: "Uq9MeobD8BxA",
     database: "neondb",
+    entities: [ User ],
+    synchronize: false,
+    logging: false,
     ssl: {
         rejectUnauthorized: false,
       },

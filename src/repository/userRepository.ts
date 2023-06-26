@@ -1,5 +1,5 @@
 const { AppDataSource } = require("./initializeDatasource")
-const { User } = require("../entities/userEntity")
+import { User } from "../entities/userEntity"
 
 function initializeRepository(){
     return AppDataSource.getRepository(User)

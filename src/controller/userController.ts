@@ -1,6 +1,6 @@
 const User = require("../models/userSchema")
 const userService = require("../services/userService")
-
+import { express } from "express";
 const express = require("express");
 const router = express.Router();
 
